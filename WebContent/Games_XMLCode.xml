@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<horrorland>
+<game>
+    <srno>1</srno>
+    <name>Outlast</name>
+    <developer>Red Barrels Studio</developer>
+    <engine>Unreal Engine</engine>
+    <platform>Windows, PS4, XBOX One, Linux, MAC OS, Nintendo Switch</platform>
+    <releasedate>September 4, 2014</releasedate>	
+</game>
+<game>
+    <srno>2</srno>
+    <name>Amnesia: The Dark Descent</name>
+    <developer>Frictional Games</developer>
+    <engine>HPL Engine 2</engine>
+    <platform>Windows, PS4, XBOX One, Linux, MAC OS</platform>
+    <releasedate>September 8, 2010</releasedate>
+</game>
+<game>
+    <srno>3</srno>
+    <name>Amnesia: A Machine for Pigs</name>
+    <developer>The Chinese Room</developer>
+    <engine>HPL Engine 2</engine>
+    <platform>Windows, PS4, Linux</platform>
+    <releasedate>September 10, 2013</releasedate>
+</game>
+<game>
+    <srno>4</srno>
+    <name>Slender: The Arrival</name>
+    <developer>Parsec Productions</developer>
+    <engine>Unity</engine>
+    <platform>Windows, PS3, PS4, XBOX 360, XBOX One, Wii U</platform>
+    <releasedate>March 26, 2013</releasedate>
+</game>
+<game>
+    <srno>5</srno>
+    <name>F.E.A.R. 3</name>
+    <developer>Wargaming</developer>
+    <engine>Unity</engine>
+    <platform>Windows, PS3, XBOX 360</platform>
+    <releasedate>June 21, 2011</releasedate>
+</game>
+</horrorland>

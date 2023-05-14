@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>
+Login Page
+</title>
+<style>
+.heading1 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+      text-shadow:3px 2px Cyan;
+}
+.heading2 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+}
+.body1 {
+      background-color:Black; 
+}
+.hr1{
+      color:Red;
+}
+a:hover {
+      color: Red;
+}
+a:link {
+      color:Purple;
+}
+.heading3 {
+      color:Red;
+      text-align:left;
+      font-family:Ravie;
+}
+</style>
+<script type="text/javascript">
+function formValidation()
+{
+ var u=document.getElementById("uid").value;
+ var p=document.getElementById("pid").value;
+ if(u==="" || p==="")
+ {
+  alert("Fields must not be empty");
+  return false;
+ }
+// else
+// {
+//  alert("You have logged into your account successfully!");
+//  return true; 
+// }
+ }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#abb5d3");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "White");
+    });
+});
+</script>
+
+
+</head>
+<body class="body1">
+<h1 class="heading1">LOG INTO YOUR ACCOUNT</h1>
+<hr class="hr1">
+<br><br><br><br>
+<form action="Lgn.jsp" onsubmit="return formValidation()">
+<h3 class="heading3">Username: <input type="text" name="username" id="uid"></h3><img src="Blood.jpg" height=300 width=400 align="right">
+<br><br>
+<h3 class="heading3">Password: <input type="password" name="password" id="pid"></h3>
+<br><br>
+<button type="submit"><h3 class="heading2">Log In</h3></button>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><h4 class="heading2">Developed & Maintained by <b><i>The Demon King</i></b><sup>&copy;</sup></h4>
+<br><br>
+<hr class="hr1">
+<br><br><br>
+<h4 class="heading2"><a href="About.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Facebook.html">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Twitter.html">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Contact.html">Contact</a></h4>
+</body>
+</html>

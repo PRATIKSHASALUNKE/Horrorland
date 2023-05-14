@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>
+Horror Books
+</title>
+<style>
+.heading1 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+      text-shadow:3px 2px Cyan;
+}
+.body1 {
+      background-color:Black; 
+}
+.hr1{
+      color: Red;
+}
+a:hover {
+      color: Red;
+}
+a:link {
+      color: Purple;
+}
+.heading2 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+}
+.heading3 {
+      color:Red;
+      text-align:left;
+      font-family:Ravie;
+}
+table {
+      width:100%;
+}
+table, th, td {
+      border: 1px solid Red;
+      border-collapse: collapse;
+}
+th, td {
+      padding: 30px;
+      text-align: left;
+      font-size:150%;
+}
+table#t1 tr:nth-child(even) {
+      background-color:Violet;
+}
+table#t1 tr:nth-child(odd) {
+      background-color:Cyan;
+}
+table#t1 th {
+      background-color: Purple;
+      color: White;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+         $("#t1").fadeToggle(3000);
+    });
+});
+</script>
+
+
+</head>
+<body class="body1">
+<h1 class="heading1">HORROR BOOKS</h1>
+<hr class="hr1">
+<br><br>
+<h3 class="heading3">The following books are available on this website as yet: </h3>
+<br><br>
+<table id="t1">
+   <tr>
+      <th>Sr. No.</th>
+      <th>Name</th>
+      <th>Series</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>No. of Pages</th>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td><a href="WTDH.pdf">Welcome to Dead House</a></td>
+      <td>Goosebumps</td>
+      <td>R.L. Stine</td>
+      <td>80</td>
+      <td>63</td>       
+   </tr>
+   <tr>
+      <td>2</td>
+      <td><a href="SOotB.pdf">Stay Out of the Basement</a></td>
+      <td>Goosebumps</td>
+      <td>R.L. Stine</td>
+      <td>75</td>
+      <td>61</td>       
+   </tr>
+   <tr>
+      <td>3</td>
+      <td><a href="MB.pdf">Monster Blood</a></td>
+      <td>Goosebumps</td>
+      <td>R.L. Stine</td>
+      <td>85</td>
+      <td>70</td>       
+   </tr>
+   <tr>
+      <td>4</td>
+      <td><a href="TSWaM.pdf">The Scarecrow Walks at Midnight</a></td>
+      <td>Goosebumps</td>
+      <td>R.L. Stine</td>
+      <td>75</td>
+      <td>66</td>       
+   </tr>
+   <tr>
+      <td>5</td>
+      <td><a href="NotLD.pdf">Night of the Living Dummy</a></td>
+      <td>Goosebumps</td>
+      <td>R.L. Stine</td>
+      <td>85</td>
+      <td>70</td>       
+   </tr>
+</table>
+
+<br>
+<center><button type="button"><h3 class="heading3">Click on me!</h3></button></center>
+
+<br>
+<center><h3 class="heading2">Developed & Maintained by <b><i>The Demon King</i></b><sup>&copy;</sup></h3></center>
+<hr class="hr1">
+<h4 class="heading2"><a href="About.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Facebook.html">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Twitter.html">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Contact.html">Contact</a></h4>
+</body>
+</html>

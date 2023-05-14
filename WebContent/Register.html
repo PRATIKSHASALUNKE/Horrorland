@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>
+Registration Page
+</title>
+<style>
+.heading1 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+      text-shadow:3px 2px Cyan;
+}
+.heading2 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+}
+.body1 {
+      background-color:Black; 
+}
+.hr1{
+      color:Red;
+}
+a:hover {
+      color: Red;
+}
+a:link {
+      color:Purple;
+}
+.heading3 {
+      color:Red;
+      text-align:left;
+      font-family:Ravie;
+}
+</style>
+<script type="text/javascript">
+function formValidation()
+{
+ var n=document.getElementById("nid").value;
+ var d=document.getElementById("did").value;
+ var e=document.getElementById("eid").value;
+ var p=document.getElementById("pid").value;
+ var c=document.getElementById("cpid").value;
+ if(n==="" || d==="" || e==="" || p==="" || c==="")
+ {
+  alert("Fields can't be left empty!");
+  return false;
+ }
+ else
+ {
+  if(p!=c)
+  {
+   alert("Passwords do not match!");
+   return false;
+  }
+//  else
+//  {
+//   alert("You have been successfully registered with us! ");
+//   return true; 
+//  } 
+ }
+}
+
+function Image_Name() {
+    document.getElementById("img1").src = "EdBathsheba.jpg";
+}
+
+function Image_Email() {
+    document.getElementById("img1").src = "TheRingSamara.jpg";
+}
+function Image_Password() {
+    document.getElementById("img1").src = "LorraineValak.jpg";
+}
+function Image_ConfirmPassword() {
+    document.getElementById("img1").src = "ValakPainting.png";
+}
+function Image_DOB() {
+    document.getElementById("img1").src = "AHauntingS8E1.jpg";
+}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#abb5d3");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "White");
+    });
+});
+</script>
+
+</head>
+<body class="body1">
+<h1 class="heading1">REGISTRATION PAGE</h1>
+<hr class="hr1">
+<br><br><br><br>
+<form action="Rgstr.jsp" onsubmit="return formValidation()">
+<h3 class="heading3">Name<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" id="nid" placeholder="First_Name Last_Name" onclick="Image_Name()"></h3><img id="img1" src="EdBathsheba.jpg" height=400 width=400 align="right">
+<br>
+<h3 class="heading3">Gender<sup>*</sup>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="male" checked>Male &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female">Female 
+<br><br>
+<h3 class="heading3">Date of Birth<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date" id="did" onclick="Image_DOB()"></h3>
+<br>
+<h3 class="heading3">Email id<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" id="eid" placeholder="abc@xyz.com" onclick="Image_Email()"></h3>
+<br>
+<h3 class="heading3">Password<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="pid" onclick="Image_Password()"></h3>
+<br>
+<h3 class="heading3">Confirm Password<sup>*</sup>: &nbsp;<input type="password" name="confirm" id="cpid" onclick="Image_ConfirmPassword()"></h3>
+<br>
+<button type="submit"><h3 class="heading2">Submit</h3></button>
+</form>
+<h4 class="heading2">Developed & Maintained by <b><i>The Demon King</i></b><sup>&copy;</sup></h4>
+<br><br>
+<hr class="hr1">
+<br>
+<h4 class="heading2"><a href="About.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Facebook.html">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Twitter.html">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Contact.html">Contact</a></h4>
+</body>
+</html>

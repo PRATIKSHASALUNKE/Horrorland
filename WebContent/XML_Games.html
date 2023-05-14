@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>
+Horror Games
+</title>
+<style>
+.heading1 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+      text-shadow:3px 2px Cyan;
+}
+.body1 {
+      background-color:Black; 
+}
+.hr1{
+      color: Red;
+}
+a:hover {
+      color: Red;
+}
+a:link {
+      color: Purple;
+}
+.heading2 {
+      color:Red;
+      text-align:center;
+      font-family:Ravie;
+}
+.heading3 {
+      color:Red;
+      text-align:left;
+      font-family:Ravie;
+}
+table {
+      width:100%;
+}
+table, th, td {
+      border: 1px solid Red;
+      border-collapse: collapse;
+}
+th, td {
+      padding: 30px;
+      text-align: left;
+      font-size:150%;
+}
+table#t1 tr:nth-child(even) {
+      background-color:Violet;
+}
+table#t1 tr:nth-child(odd) {
+      background-color:Cyan;
+}
+table#t1 th {
+      background-color: Purple;
+      color: White;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+         $("#t1").fadeToggle(3000);
+    });
+});
+</script>
+
+</head>
+<body class="body1">
+<h1 class="heading1">HORROR GAMES</h1>
+<hr class="hr1">
+<br><br>
+<h3 class="heading3" title="Can't see anything? Well, click on me!" onclick="loadTable()">Info. about the following games are available on this website: </h3>
+<br><br>
+
+<table id="t1"></table>
+
+<script>
+function loadTable() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "Games_XMLCode.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Sr. No.</th><th>Name</th><th>Developer</th><th>Engine</th><th>Platform Supported</th><th>Release Date</th></tr>";
+  var x = xmlDoc.getElementsByTagName("game");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("srno")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</td><td>" + 
+    x[i].getElementsByTagName("developer")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("engine")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("platform")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("releasedate")[0].childNodes[0].nodeValue +
+    "</td></tr>"; 
+  }
+  document.getElementById("t1").innerHTML = table;
+}
+</script>
+
+<br>
+<center><button type="button"><h3 class="heading3">Click on me!</h3></button></center>
+<br>
+<center><h3 class="heading2">Developed & Maintained by <b><i>The Demon King</i></b><sup>&copy;</sup></h3></center>
+<hr class="hr1">
+<h4 class="heading2"><a href="About.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Facebook.html">Facebook</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Twitter.html">Twitter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Contact.html">Contact</a></h4>
+</body>
+</html>
